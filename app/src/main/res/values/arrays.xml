@@ -2,5 +2,6 @@
 <resources>
     <string-array name="lbs_index">
         <item>Tencent Map</item>
+        <item>Tencent Location</item>
     </string-array>
 </resources>

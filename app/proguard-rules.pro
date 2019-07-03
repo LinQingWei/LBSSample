@@ -36,3 +36,14 @@
 -keep class com.tencent.lbssearch.**{*;}
 -keepattributes Signature
 -dontwarn com.tencent.lbssearch.**
+
+#腾讯定位 sdk
+-keepclassmembers class ** {
+    public void on*Event(...);
+}
+-keep class c.t.**{*;}
+-keep class com.tencent.map.geolocation.**{*;}
+-keep class com.tencent.tencentmap.lbssdk.service.**{*;}
+
+-dontwarn  org.eclipse.jdt.annotation.**
+-dontwarn  c.t.**

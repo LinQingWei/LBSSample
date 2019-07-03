@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.tencent.tencentmap.mapsdk.maps.MapView;
 import com.tencent.tencentmap.mapsdk.maps.TencentMap;
 
-import cn.way.lbs.BaseActivity;
+import cn.way.lbs.abs.BaseActivity;
 import cn.way.lbs.R;
 
 public class MapViewActivity extends BaseActivity {

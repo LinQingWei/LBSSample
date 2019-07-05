@@ -27,7 +27,9 @@
             android:name="TencentMapSDK"
             android:value="ZVJBZ-OTDAX-DMS43-ZH6EC-TF665-DUFAU" />
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +40,8 @@
         <activity
             android:name=".tencent.MapViewActivity"
             android:exported="false"
-            android:label="Tencent Map">
+            android:label="Tencent Map"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="cn.way.lbs.intent.action.LBS_INDEX_0" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -48,7 +51,8 @@
         <activity
             android:name=".tencent.LocationActivity"
             android:exported="false"
-            android:label="Tencent Location">
+            android:label="Tencent Location"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="cn.way.lbs.intent.action.LBS_INDEX_1" />
                 <category android:name="android.intent.category.DEFAULT" />

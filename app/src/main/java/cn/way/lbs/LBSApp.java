@@ -7,6 +7,8 @@ import com.tencent.tencentmap.mapsdk.maps.model.Marker;
 
 import java.util.ArrayList;
 
+import cn.way.lbs.util.Utils;
+
 public class LBSApp extends Application {
     private static ArrayList<Marker> sFenceItems = new ArrayList<>();
     private static ArrayList<TencentGeofence> sFences = new ArrayList<>();
@@ -30,5 +32,11 @@ public class LBSApp extends Application {
 
     public static ArrayList<String> getEvents() {
         return sEvents;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Utils.init(this);
     }
 }

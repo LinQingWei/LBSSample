@@ -37,6 +37,10 @@ public class LocationActivity extends BaseActivity {
     private List<Fragment> loadFragments() {
         ArrayList<Fragment> fragments = new ArrayList<>(1);
         fragments.add(LocSdkInfoFragment.newInstance());
+        fragments.add(LocStatusFragment.newInstance());
+        fragments.add(LocLevelFragment.newInstance());
+        fragments.add(LocThreadFragment.newInstance());
+        fragments.add(LocDirectionFragment.newInstance());
 
         return fragments;
     }

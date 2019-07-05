@@ -14,6 +14,7 @@ import com.tencent.map.geolocation.TencentLocationManager;
 import androidx.annotation.Nullable;
 import cn.way.lbs.R;
 import cn.way.lbs.abs.BaseLazyFragment;
+import cn.way.lbs.util.Utils;
 
 public class LocSdkInfoFragment extends BaseLazyFragment {
     private LocationManager mLocationManager;
@@ -21,6 +22,7 @@ public class LocSdkInfoFragment extends BaseLazyFragment {
 
     private TextView mTvBuild;
     private TextView mTvVersion;
+    private TextView mKey;
     private TextView mGps;
     private TextView mWifi;
     private Button mButton;
@@ -48,6 +50,7 @@ public class LocSdkInfoFragment extends BaseLazyFragment {
 
         mTvBuild = findViewById(R.id.build);
         mTvVersion = findViewById(R.id.version);
+        mKey = findViewById(R.id.key);
         mGps = findViewById(R.id.gps);
         mWifi = findViewById(R.id.wifi);
         mButton = findViewById(R.id.button1);
@@ -62,8 +65,10 @@ public class LocSdkInfoFragment extends BaseLazyFragment {
         // 显示 版本号
         mTvVersion.setText(String.format(getString(R.string.version), mgr.getVersion()));
 
+        mKey.setText(String.format(getString(R.string.key), Utils.getKey(mActivity)));
+
         // 显示 gps 状态
-        boolean gpsEnabled = false;
+        boolean gpsEnabled;
 
         /* 防止BITA平台兼容性测试时潜在的权限禁止问题导致测试失败 */
         try {

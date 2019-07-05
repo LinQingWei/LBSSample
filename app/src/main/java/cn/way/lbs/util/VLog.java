@@ -22,6 +22,10 @@ public final class VLog {
         Log.i(TAG, string);
     }
 
+    public static void i(String localTag, String string) {
+        Log.i(TAG, formatMessage(localTag, string));
+    }
+
     public static void w(String string) {
         Log.w(TAG, string);
     }
